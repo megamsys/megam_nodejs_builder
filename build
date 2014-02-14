@@ -1,0 +1,13 @@
+#!/bin/bash
+#Nodejs builder Git
+
+#megam_builder_ruby/build tomcat tap tap.js https://github.com/indykish/aryabhata.git 
+stop nodejs
+      cd /home/sandbox/
+      rm -r $2
+      git clone $4
+      cd $2
+      npm install
+      npm install forever-monitor
+start nodejs
+
