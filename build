@@ -8,6 +8,6 @@ stop nodejs
       git clone $4
       cd $2
       npm install
-      npm install forever-monitor
+      #npm install forever-monitor
 start nodejs
 
