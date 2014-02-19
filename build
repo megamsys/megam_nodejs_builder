@@ -3,6 +3,22 @@
 
 #megam_nodejs_builder/build nodejs project=ghost local_repo=/home/sandbox/ghost remote_repo=https://github.com/thomasalrin/ghost.git
 
+for i in "$@"
+do
+case $i in
+    project=*)
+    project="${i#*=}"
+
+    ;;
+    local_repo=*)
+    local_repo="${i#*=}"
+    ;;
+    remote_repo=*)
+    remote_repo="${i#*=}"
+    ;;
+esac
+done
+
 stop nodejs
       cd /home/sandbox/
       rm -r $project
